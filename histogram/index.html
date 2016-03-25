@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Data Validation</title> 
+        <link rel ="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js" charset="utf-8"></script>
+    
+    </head>
+    <body>
+        <div id="container">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+
+        <h1 id = "selected" style="text-align:center;"></h1>
+    <div id = "wrap">
+        <table class="head">
+        <tr>
+            <th>Raw Data</th>
+        </tr>
+        </table>
+        <div id = "dataset">
+            <table id ="tableset" style>
+            </table>
+        </div>
+    </div>
+            
+    <hr></hr>
+        
+    <select id = "slct1" name = "slct1" onchange="populate(this.id,'slct2')">
+        <option value = "bots">bot</option>
+        <option value = "bots_part2">bot 2</option>
+        <option value = "user_bot_data_small_part1">human</option>    
+    </select>
+    <select id = "slct2" name = "slct2" onchange="updateData(this.options[this.selectedIndex].value)"></select>
+    
+    <p class="range_input">
+        <label for="nAngle" 
+            style="display: inline-block; width: auto; text-align: right">
+        Buckets: <span id="nAngle-value">…</span>
+        </label>
+        <input type="range" min="1" max="30" step="1"id="nAngle">
+    </p>
+        <input class="filter_button" id="c_button" type="checkbox">Logarithmic Scale</input>
+        </div>
+    </body>
+
+        <script type="text/javascript" src="script.js"></script>
+</html>
+
